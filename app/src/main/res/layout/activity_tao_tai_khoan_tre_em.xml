@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.TaoTaiKhoanTreEmActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.loan555.kidsapplication.ui.viewmodel.ApiTaiKhoanViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/nhapTenTaiKhoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Tên đăng nhập"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:id="@+id/nhapMatKhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Mật khẩu mới"
+                    android:inputType="numberPassword"
+                    android:selectAllOnFocus="true" />
+
+                <EditText
+                    android:id="@+id/nhapLaiMatKhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Nhập lại mật khẩu"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/nhapTen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Tên "
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/nhapNgaySinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Ngày sinh"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/nhapThanhPho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Thành phố"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/nhapHuyen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Huyện"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/nhapXa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Xã"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/nhapDiaChi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Địa chỉ cụ thể"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/btnChonAnh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn ảnh đại diện" />
+
+                <ImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_image" />
+
+                <TextView
+                    android:id="@+id/mess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnTaoTaiKhoanTreEm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tạo tài khoản"
+                app:layout_constraintRight_toRightOf="@id/layout"
+                app:layout_constraintTop_toBottomOf="@id/layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

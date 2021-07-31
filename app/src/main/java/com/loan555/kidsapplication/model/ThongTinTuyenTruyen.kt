@@ -1,0 +1,18 @@
+package com.loan555.kidsapplication.model
+
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+data class ThongTinTuyenTruyen(
+    @SerializedName("_id")
+    val id: String,
+
+    val tenBaiViet: String,
+    val tacGia: String,
+    val chuThich: String,
+    val loaiThongTinTuyenTruyen: LoaiThongTinTuyenTruyen,
+    val dinhDangThongTinTuyenTruyen: DinhDangThongTinTuyenTruyen,
+    val ngayDang: String,
+    val tinhTrang: String,
+    val anhDaiDien: String
+): Serializable

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    tools:context=".ui.detailnew.DetailActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.loan555.kidsapplication.ui.main.MainViewModel" />
+
+        <variable
+            name="detailViewModel"
+            type="com.loan555.kidsapplication.ui.detailnew.detail.DetailViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tenBaiViet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ngayDang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tenBaiViet" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dot"
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:layout_below="@id/tenBaiViet"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@id/ngayDang"
+                        app:cardCornerRadius="2dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black2" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tacGia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tenBaiViet"
+                        android:layout_toEndOf="@id/dot"/>
+
+                    <TextView
+                        android:id="@+id/loaiTin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tacGia"/>
+
+                    <TextView
+                        android:id="@+id/chuThich"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/loaiTin"/>
+
+                    <ImageView
+                        android:id="@+id/anhDaiDien"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chuThich"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:id="@+id/noiDung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/anhDaiDien" />
+                </RelativeLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </FrameLayout>
+</layout>
